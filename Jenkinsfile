@@ -1,9 +1,10 @@
 pipeline {
     agent {
         docker {
-            image:'jenkins-agent'
+            image:'ruslandee/jenkins-agent:latest'
         }
     }
+    
     stage ('Copy source with configs') {
         steps {
             echo 'Checkout git branch'
@@ -15,7 +16,11 @@ pipeline {
             sh 'mvn package'
         }
     }
-    stage ('Make docker image') {}
+    stage ('Make docker image') {
+        steps{
+
+        }
+    }
     stage ('Run Docker on production server') {
 			input {
 				message "Confirm deploy to prod"
