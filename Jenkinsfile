@@ -19,13 +19,14 @@ pipeline {
         }
         stage ('Make docker image') {
             steps{
-
+m               echo 'Make docker image'
             }
         }
         stage ('Run Docker on production server') {
 			input {
 				message "Confirm deploy to prod"
 				ok "Go!"
+			}
 			steps {
 				echo "Deploying to prod"
 			}
