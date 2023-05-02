@@ -18,8 +18,8 @@ pipeline {
             }
         }
         stage ('Make docker image') {
-            steps{
-m               echo 'Make docker image'
+            steps {
+               echo 'Make docker image'
             }
         }
         stage ('Run Docker on production server') {
