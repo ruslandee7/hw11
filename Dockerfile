@@ -1,4 +1,5 @@
 FROM ubuntu:20.04
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt update
 RUN apt install openjdk-8-jre maven git openssh-client docker.io -y
 # Configure ssh client
