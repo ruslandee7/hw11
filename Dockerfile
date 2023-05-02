@@ -1,6 +1,6 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 RUN apt update
-RUN apt install openjdk-8-jre maven openssh-client docker.io -y
+RUN apt install openjdk-8-jre maven git openssh-client docker.io -y
 # Configure ssh client
 COPY id_rsa /root/.ssh/id_rsa
 RUN chmod 600 /root/.ssh/id_rsa
