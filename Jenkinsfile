@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image:'ruslandee/jenkins-agent:latest'
+            image 'ruslandee/jenkins-agent:latest'
         }
     }
 
